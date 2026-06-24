@@ -10,13 +10,13 @@ CREATE TABLE Countries (
 );
 
 CREATE TABLE Products (
-    ID INT,
+    ID INT AUTO_INCREMENT,
     ProductName VARCHAR(50),
     PRIMARY KEY (ID)
 );
 
 CREATE TABLE Warehouses (
-    ID INT,
+    ID INT AUTO_INCREMENT,
     WarehouseName VARCHAR(50),
     WarehouseAddress VARCHAR(50),
     CountryID INT,
@@ -26,7 +26,7 @@ CREATE TABLE Warehouses (
 
 
 CREATE TABLE ProductInventory (
-    ID INT,
+    ID INT AUTO_INCREMENT,
     ProductID INT,
     FOREIGN KEY (ProductID) REFERENCES Products(ID) ON DELETE CASCADE,
     WarehouseAmount INT,
